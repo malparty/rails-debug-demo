@@ -6,6 +6,8 @@ class ArticlesController < ApplicationController
   # GET /articles or /articles.json
   def index
     @articles = Article.all
+    last_article = @articles.last
+    last_article.title = 'A new title!'
   end
 
   # GET /articles/1 or /articles/1.json

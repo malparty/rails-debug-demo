@@ -53,6 +53,10 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  # OR, command line debugging
+  gem 'pry-byebug' # Step by step debugging and stack navigation in Pry
+  gem 'pry-rails' # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
 end
 
 group :development do

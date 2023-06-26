@@ -5,13 +5,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Rails server",
-      "type": "Ruby",
+      // Required: https://marketplace.visualstudio.com/items?itemName=KoichiSasada.vscode-rdbg
+      // Source: https://inspirnathan.com/posts/145-debug-ruby-on-rails-in-vscode/
+      "type": "rdbg",
+      "name": "Debug Rails with rdbg",
       "request": "launch",
-      "program": "${workspaceRoot}/bin/rails",
-      "args": [
-        "server"
-      ]
+      "script": "${workspaceRoot}/bin/rails server",
+      "useBundler": false,
+      "command": "ruby"
+    },
+    {
+      "type": "rdbg",
+      "name": "Attach with rdbg",
+      "request": "attach"
     }
   ]
 }
+
+
