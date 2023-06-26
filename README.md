@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Debug with Visual Code UI
 
-Things you may want to cover:
+Check at the `launch.json` config: [.vscode/launch.json](.vscode/launch.json).
 
-* Ruby version
+This use the gem [debug](https://github.com/ruby/debug) that is setup by default on new Rails projects.
 
-* System dependencies
+> ℹ️ Learn more:
+>
+> [inspirnathan.com debug-ruby-on-rails-in-vscode](https://inspirnathan.com/posts/145-debug-ruby-on-rails-in-vscode/)
+> [vscode-rdbg extension for VS Code](https://marketplace.visualstudio.com/items?itemName=KoichiSasada.vscode-rdbg)
 
-* Configuration
+## Debug with the pry-rails gem
 
-* Database creation
+Check at the `Gemfile` under `group :development, :test do`: [Gemfile](Gemfile#L58).
+- `pry-byebug`
+- `pry-rails`
 
-* Database initialization
+Add a `binding.pry` breakpoint and you are ready to go!
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+> ℹ️ Learn more:
+>
+> [github.com/pry/pry-rails](https://github.com/pry/pry-rails)
+> [github.com/deivid-rodriguez/pry-byebug](https://github.com/deivid-rodriguez/pry-byebug)
+> [docs.gitlab.com/ee/development/pry_debugging.html](https://docs.gitlab.com/ee/development/pry_debugging.html)
